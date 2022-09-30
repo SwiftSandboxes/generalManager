@@ -18,6 +18,7 @@
 		<skip.surefire.tests>${skipTests}</skip.surefire.tests>
 		<sonar.organization>swiftsandboxes</sonar.organization>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+		<sonar.inclusions>src/main/java/**,src/main/resources/**</sonar.inclusions>
 		<sonar.exclusions>
 			**/src/main/java/swiftbball/generalManager/GeneralManagerApplication.java
 		</sonar.exclusions>
