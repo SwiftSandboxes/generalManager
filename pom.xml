@@ -15,6 +15,7 @@
 	<description>Backend app for General Manager activities</description>
 	<properties>
 		<java.version>11</java.version>
+		<skip.surefire.tests>${skipTests}</skip.surefire.tests>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -46,6 +47,14 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+			<artifactId>maven-surefire-plugin</artifactId>
+			<configuration>
+				<!-- allows skip of surefire tests without skipping failsafe tests. 
+				Same var in properties allows skipTests to skip both surefire & failsafe as normal-->
+				<skipTests>${skip.surefire.tests}</skipTests>
+			</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
