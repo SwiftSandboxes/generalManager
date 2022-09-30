@@ -3,7 +3,7 @@ name: Pull Request to Master
 on:
 # pushes and pulls into master/main will be handled on a separate workflow
   pull_request:
-    types: [review_requested, ready_for_review]
+    types: [ready_for_review]
     branches:
       - main
       - master
