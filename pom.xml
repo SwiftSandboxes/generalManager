@@ -20,7 +20,7 @@
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 		<sonar.inclusions>src/main/java/**,src/main/resources/**</sonar.inclusions>
 		<sonar.exclusions>
-			**/src/main/java/swiftbball/generalManager/GeneralManagerApplication.java
+			**/src/main/java/swiftbball/generalmanager/GeneralManagerApplication.java
 		</sonar.exclusions>
 	</properties>
 	<dependencies>
