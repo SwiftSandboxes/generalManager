@@ -29,7 +29,7 @@
 				<sonar.sources>.</sonar.sources>
 				<sonar.inclusions>src/main/java/**,src/main/resources/**</sonar.inclusions>
 				<sonar.exclusions>${code.coverage.exclusions}</sonar.exclusions>
-				<sonar.projectKey>swiftsandboxes_generalManager</sonar.projectKey>
+				<sonar.projectKey>SwiftSandboxes_generalManager</sonar.projectKey>
 				<sonar.organization>${sonar.organization}</sonar.organization>
 				<sonar.host.url>${sonar.host.url}</sonar.host.url>
 			</properties>
