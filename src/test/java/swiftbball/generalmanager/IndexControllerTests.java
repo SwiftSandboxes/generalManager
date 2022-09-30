@@ -1,4 +1,4 @@
-package swiftbball.generalManager;
+package swiftbball.generalmanager;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

@@ -1,4 +1,4 @@
-package swiftbball.generalManager;
+package swiftbball.generalmanager;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
