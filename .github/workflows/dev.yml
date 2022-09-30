@@ -19,5 +19,5 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 11.0.16
-      - name: Maven Verify
+      - name: Maven Verify - skip IT (i.e., component) tests
         run: mvn -B clean verify -DskipITs
