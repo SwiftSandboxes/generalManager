@@ -35,6 +35,7 @@ jobs:
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
     - name: Docker Push JAR
+    - shell: bash
         env:
           SUPER_SECRET: ${{ secrets.DOCKERHUBUSERNAME }}
       run: mvn deploy jib:build -P deploy-docker -DdockerHubUsername="$DOCKERHUBUSERNAME"
