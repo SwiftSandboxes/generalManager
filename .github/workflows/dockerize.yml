@@ -35,4 +35,5 @@ jobs:
     - shell: bash
       env:
         SUPER_SECRET: ${{ secrets.DOCKERHUBUSERNAME }}
-      run: mvn deploy jib:build -P deploy-docker -DdockerHubUsername="$DOCKERHUBUSERNAME"
+      run: echo "$DOCKERHUBUSERNAME"
+      # run: echomvn deploy -B jib:build -P deploy-docker -DdockerHubUsername="$DOCKERHUBUSERNAME" -DskipTests
