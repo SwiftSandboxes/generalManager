@@ -22,7 +22,34 @@
 		<sonar.exclusions>
 			**/src/main/java/swiftbball/generalmanager/GeneralManagerApplication.java
 		</sonar.exclusions>
+		<dockerHub.username>${dockerHubUsername}</dockerHub.username>
 	</properties>
+	<profiles>
+		<profile>
+			<id>deploy-docker</id>
+			<properties>
+				<maven.deploy.skip>true</maven.deploy.skip>
+			</properties>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>com.google.cloud.tools</groupId>
+						<artifactId>jib-maven-plugin</artifactId>
+						<version>3.3.0</version>
+						<configuration>
+							<to>
+								<image>${dockerHub.username}/sandbox</image>
+								<tags>
+									<tag>${project.version}</tag>
+									<tag>latest</tag>
+								</tags>
+							</to>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
