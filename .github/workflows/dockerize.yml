@@ -5,12 +5,8 @@ name: Maven Package
 
 on:
   push:
-    branches-ignore:
+    branches:
       - master
-      - release*
-# on:
-#   release:
-#     types: [created]
 
 jobs:
   Docker:
