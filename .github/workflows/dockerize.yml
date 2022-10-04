@@ -25,14 +25,13 @@ jobs:
     - name: Set up JDK 11 & clean install
       uses: actions/setup-java@v3
       with:
-        java-version: '11'
+        java-version: 11.0.16
     
     - name: Login & Push to Docker Hub
       uses: docker/login-action@v1
       with:
         username: ${{ secrets.DOCKERHUBUSERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
-
     - shell: bash
       env:
         SUPER_SECRET: ${{ secrets.DOCKERHUBUSERNAME }}
