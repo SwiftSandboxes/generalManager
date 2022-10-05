@@ -12,7 +12,7 @@ on:
 jobs:
 # run sonar before Docker to double check that coverage looks good after merge to main/master
   sonar:
-      name: SonarCloud Scan
+      name: SonarCloud Scan & Docker Push
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v2
