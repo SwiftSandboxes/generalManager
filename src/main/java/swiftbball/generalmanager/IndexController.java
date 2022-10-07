@@ -11,6 +11,7 @@ public class IndexController {
 	@ResponseBody                                     
 	public String index() {                           
 		return "Hello World";  
+		
 	}                                                 
                                                       
 }

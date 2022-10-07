@@ -24,7 +24,10 @@ public class IndexTestIT {
     @Test
     public void whenRequestGet_thenOK() {
         given().when()
+        .log().all()
         .get("/index")
-        .then().statusCode(200);    
+        .then()
+        .log().all()
+        .statusCode(200);    
     }
 }

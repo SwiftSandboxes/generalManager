@@ -1,26 +1,23 @@
-package swiftbball.generalmanager.daos;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+package swiftbball.generalmanager.repository;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Data;
+import lombok.Getter;
 import lombok.Setter;
 
 @Builder
-@Data
-@Entity
+@AllArgsConstructor
+@Getter
+@Document(collection = "Team")
 public class Team {
 
     @Setter(AccessLevel.NONE)
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-
     private String name;
     private String location;
 
