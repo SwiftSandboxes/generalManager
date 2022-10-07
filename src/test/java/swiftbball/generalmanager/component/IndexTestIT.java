@@ -1,4 +1,4 @@
-package swiftbball.generalmanager.integration;
+package swiftbball.generalmanager.component;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
